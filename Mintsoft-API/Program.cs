@@ -202,7 +202,7 @@ namespace Mintsoft.API
             var webClient = new WebClient();
             webClient.Headers.Add(HttpRequestHeader.Accept, "application/json");
             webClient.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-            var ResultJson = webClient.UploadString("https://api-test.mintsoft.co.uk/api/ASN/" + ASNId + "/ConnectActions?APIKey=" + apiKey, "PUT", ConnectJson);
+            var ResultJson = webClient.UploadString("https://api.mintsoft.co.uk/api/ASN/" + ASNId + "/ConnectActions?APIKey=" + apiKey, "PUT", ConnectJson);
 
             return Newtonsoft.Json.JsonConvert.DeserializeObject<APIResult>(ResultJson);
         }
