@@ -111,6 +111,10 @@ namespace Mintsoft.API
 
         [DataMember]
         public List<NewOrderNameValue> OrderNameValues { get; set; }
+
+        [DataMember]
+        // Only used when Admins are creating an Order
+        public int? ClientId { get; set; }
     }
 
     [DataContract]
@@ -143,6 +147,9 @@ namespace Mintsoft.API
 
         [DataMember]
         public decimal UnitPriceVat { get; set; }
+
+        [DataMember]
+        public decimal Discount { get; set; }
 
         [DataMember]
         public List<NewOrderItemNameValue> OrderItemNameValues { get; set; }
